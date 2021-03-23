@@ -1,0 +1,73 @@
+@import 'reset';
+%flexProp{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background: pink;
+    height:100vh;
+    width:100%;
+    @extend %flexProp;
+        
+}
+
+.container{
+    padding:15px 15px;
+//    @extend %flexProp; 
+    display: flex;
+    justify-content: center;
+    width:400px;
+//    padding:15px 20px;
+    background: white;
+//    border:2px solid black;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    form{
+        margin:30px 40px;
+        width:100%;
+    }
+    h2{
+        margin:15px 0px;
+        text-align: center;
+    }
+}
+.form-control{
+//    margin-bottom: 10px;
+    width:90%;
+    label{
+        font-family: arial;
+        font-size: 14px;
+        
+    }
+    input{
+        display: block;
+        width:100%;
+        border-radius: 8px;
+        border:0.5px solid grey;
+    }
+    small{
+//        display: none;
+        visibility: hidden;
+    }
+}
+button{
+    display: block;
+    width:100%;
+    padding:10px 15px;
+    background: lighten(#1482a3,8);
+    margin-bottom: 18px;
+    margin-top: 12px;
+}
+
+.form-control.error input{
+//    border:2px solid #e74c3c !important;
+    border-color: #e74c3c !important;
+//    background: green;
+}
+.form-control.success input{
+    border-color: #2ecc71 !important;
+}
+.form-control.error small{
+    visibility: visible;
+        color:#e74c3c;
+}
